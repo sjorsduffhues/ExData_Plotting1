@@ -7,6 +7,5 @@ date_time<-strptime(paste(subdata$Date, subdata$Time, sep=" "), "%d/%m/%Y %H:%M:
 
 #construct plot
 png("plot2.png", width=480, height=480)
-#global_active_power<-as.numeric(subdata$Global_active_power)
 plot(date_time, as.numeric(subdata$Global_active_power), xlab="", ylab="Global Active Power (kilowatts)", type="l")
 dev.off()
